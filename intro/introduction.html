@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-Compatible" content="ie=edge">
+    <title>自己紹介</title>
+    <style type="text/css"> 
+        body{
+            padding: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #FBFBEF;   
+        } 
+     .title{
+         background-color: darkcyan;
+         color: floralwhite;
+         width: 500px;
+         height: 100px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin:50px auto;
+    }
+     .goat{
+         background-image: url("img/yagi.jpg");
+         background-size: contain;
+         width: 300px;
+         height: 269px;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;  
+     }
+     /* やじるし */
+     .arrow-icon1 {
+         box-sizing: border-box;
+         display: inline-block;
+         position: relative;
+         width: 40px;
+         height: 40px;
+         border-style: solid;
+         border-width: 8px 8px 0 0;
+         border-color: black;  
+         transform: rotate(45deg);
+         margin: 20px;
+     }
+     .arrow-icon2 {
+         box-sizing: border-box;
+         display: inline-block;
+         position: relative;
+         width: 40px;
+         height: 40px;
+         border-style: solid;
+         border-width: 8px 8px 0 0;
+         border-color: black;  
+         transform: rotate(45deg);
+         margin: 20px;
+     }
+     #menu{
+         position:absolute;
+         padding: 10px;
+         width: 100px;
+         height: 200px;
+         top: -190px;
+         background-color: rgb(196, 149, 62);
+         opacity: .6;
+         transition: .4s;
+     }
+     #menu.menu-open{
+         top: 0;
+     }
+    /* アニメーション */
+     .steps{
+         margin: 0 auto;
+         width: 200px;
+         height: 300px;
+         background: url(anime/god.png)no-repeat;
+         animation: stepsline 1.5s steps(5) infinite;
+     }
+     @keyframes stepsline{
+      0%{
+        background-position: 0 0;
+      }
+      100%{
+        background-position: -600px 0;
+      }
+     }
+  </style>  
+</head>
+<body>
+    <div id="menu">
+        <p></p>
+            MENU
+        <li><a href="#about">ABOUT</a> </li>
+        <li><a href="#skill">SKILL</a></li> 
+    </div> 
+    <div class="title">
+    <h1> NATSUMI YAGI</h1> </div>
+    <div class="goat"></div>
+    <i class="arrow-icon1"></i>
+    <ul>
+        <div id="about">
+            <h2>ABOUT</h2>
+            <p>八木菜摘と申します。</p>
+            <p>大学では主に経営学について学び、</p>
+            <p>C言語やデータベース等も少し学びました。</p>
+            <p>また、学生時代は趣味で漫画やイラストを描いていました。</p>
+            <p>日頃からPCやイラストルールに触れているので、</p>
+            <p>機会があればそのあたりの知識を活かしたいと考えています。</p>
+            <p>スキル、実務経験はまだございませんが、</p>
+            <p>自身の強みである自分から学習していく姿勢、</p>
+            <p>集中力を活かし成長していきます。</p>
+        </div>
+        <div class="wrapper">
+            <p></p>
+            <div class="steps"></div>
+            </div>
+        <i class="arrow-icon2"></i>
+        <div id="skill">
+            <h2>SKILL</h2>
+            <p>未経験で現在はHTML,CSS,Java Script等を</p>
+            <p>研修で学んでいます。</p>
+            <p>これらのスキルや、仕事に用いるスキルは何でも</p>
+            <p>身に着けたいと考えています。</p>
+        </div>
+    </ul>
+    <script>
+        "use strict";
+     const menu = document.getElementById('menu');
+     menu.addEventListener('mouseover', () => {
+         menu.className = 'menu-open';
+         cover.className = 'menu-open';
+     });
+     menu.addEventListener('mouseleave',() => {
+        menu.className = '';
+         cover.className = '';
+    });
+    </script>   
+</html>
